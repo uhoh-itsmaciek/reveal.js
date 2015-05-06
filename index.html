@@ -41,337 +41,1012 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
 	<section>
-	  <h1>Reveal.js</h1>
-	  <h3>The HTML Presentation Framework</h3>
+	  <h1>EXPLAINING EXPLAIN</h1>
+	  <h3>A Glimpse into the Twisted Mind of the Postgres Query Planner</h3>
+	  <br/>
 	  <p>
-	    <small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+	    <small>by <a href="http://bitrotincarnate.com">Maciek Sakrejda</a> / <a href="https://twitter.com/uhoh_itsmaciek">@uhoh_itsmaciek</a></small>
+	  </p>
+	  <p>
+	    <small>based heavily on Understanding EXPLAIN by Guillaum Lelarge / Dalibo</small>
+	  </p>
+	  <p>
+	    <small>slides and photos <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">Creative Commons BY-NC-SA</a></small>
 	  </p>
 	</section>
-
 	<section>
-	  <h2>Hello There</h2>
-	  <p>
-	    reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-	  </p>
-	</section>
-
-	<!-- Example of nested vertical slides -->
-	<section>
-	  <section>
-	    <h2>Vertical Slides</h2>
-	    <p>Slides can be nested inside of each other.</p>
-	    <p>Use the <em>Space</em> key to navigate through all slides.</p>
-	    <br>
-	    <a href="#" class="navigate-down">
-	      <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-	    </a>
-	  </section>
-	  <section>
-	    <h2>Basement Level 1</h2>
-	    <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-	  </section>
-	  <section>
-	    <h2>Basement Level 2</h2>
-	    <p>That's it, time to go back up.</p>
-	    <br>
-	    <a href="#/2">
-	      <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-	    </a>
-	  </section>
-	</section>
-
-	<section>
-	  <h2>Slides</h2>
-	  <p>
-	    Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-	  </p>
-	</section>
-
-	<section>
-	  <h2>Point of View</h2>
-	  <p>
-	    Press <strong>ESC</strong> to enter the slide overview.
-	  </p>
-	  <p>
-	    Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-	  </p>
-	</section>
-
-	<section>
-	  <h2>Touch Optimized</h2>
-	  <p>
-	    Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-	  </p>
-	</section>
-
-	<section data-markdown>
-	  <script type="text/template">
-	    ## Markdown support
-
-	    Write content using inline or external Markdown.
-	    Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-	    ```
-	    <section data-markdown>
-	      ## Markdown support
-
-	      Write content using inline or external Markdown.
-	      Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-	    </section>
-	    ```
-	  </script>
-	</section>
-
-	<section>
-	  <section id="fragments">
-	    <h2>Fragments</h2>
-	    <p>Hit the next arrow...</p>
-	    <p class="fragment">... to step through ...</p>
-	    <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-	    <aside class="notes">
-	      This slide has fragments which are also stepped through in the notes window.
-	    </aside>
-	  </section>
-	  <section>
-	    <h2>Fragment Styles</h2>
-	    <p>There's different types of fragments, like:</p>
-	    <p class="fragment grow">grow</p>
-	    <p class="fragment shrink">shrink</p>
-	    <p class="fragment roll-in">roll-in</p>
-	    <p class="fragment fade-out">fade-out</p>
-	    <p class="fragment current-visible">current-visible</p>
-	    <p class="fragment highlight-red">highlight-red</p>
-	    <p class="fragment highlight-blue">highlight-blue</p>
-	  </section>
-	</section>
-
-	<section id="transitions">
-	  <h2>Transition Styles</h2>
-	  <p>
-	    You can select from different transitions, like: <br>
-	    <a href="?transition=none#/transitions">None</a> -
-	    <a href="?transition=fade#/transitions">Fade</a> -
-	    <a href="?transition=slide#/transitions">Slide</a> -
-	    <a href="?transition=convex#/transitions">Convex</a> -
-	    <a href="?transition=concave#/transitions">Concave</a> -
-	    <a href="?transition=zoom#/transitions">Zoom</a>
-	  </p>
-	</section>
-
-	<section id="themes">
-	  <h2>Themes</h2>
-	  <p>
-	    reveal.js comes with a few themes built in: <br>
-	    <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-	    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-	    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-	    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-	    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-	    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-	    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-	    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-	    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-	    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-	    <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-	  </p>
-	</section>
-
-	<section>
-	  <section data-background="#dddddd">
-	    <h2>Slide Backgrounds</h2>
-	    <p>
-	      Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-	    </p>
-	    <a href="#" class="navigate-down">
-	      <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-	    </a>
-	  </section>
-	  <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-	    <h2>Image Backgrounds</h2>
-	    <pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-	  </section>
-	  <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-	    <h2>Tiled Backgrounds</h2>
-	    <pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-	  </section>
-	  <section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-	    <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-	      <h2>Video Backgrounds</h2>
-	      <pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-	    </div>
-	  </section>
-	</section>
-
-	<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-	  <h2>Background Transitions</h2>
-	  <p>
-	    Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-	  </p>
-	  <pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-	</section>
-
-	<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-	  <h2>Background Transitions</h2>
-	  <p>
-	    You can override background transitions per-slide.
-	  </p>
-	  <pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-	</section>
-
-	<section>
-	  <h2>Pretty Code</h2>
-	  <pre><code data-trim contenteditable>
-	      function linkify( selector ) {
-	      if( supports3DTransforms ) {
-
-	      var nodes = document.querySelectorAll( selector );
-
-	      for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-	      var node = nodes[i];
-
-	      if( !node.className ) {
-              node.className += ' roll';
-	      }
-	      }
-	      }
-	      }
-	  </code></pre>
-	  <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-	</section>
-
-	<section>
-	  <h2>Marvelous List</h2>
+	  <h2>Credits</h2>
 	  <ul>
-	    <li>No order here</li>
-	    <li>Or here</li>
-	    <li>Or here</li>
-	    <li>Or here</li>
+	    <li><a href="http://www.dalibo.org/_media/understanding_explain.pdf">Understanding EXPLAIN</a></li>
+	    <li><a href="http://www.depesz.com/tag/unexplainable/">Explaining the Unexplainable</a></li>
+	    <li><a href="http://postgresguide.com/performance/explain.html">EXPLAIN at postgresguide.com</a></li>
 	  </ul>
 	</section>
-
 	<section>
-	  <h2>Fantastic Ordered List</h2>
-	  <ol>
-	    <li>One is smaller than...</li>
-	    <li>Two is smaller than...</li>
-	    <li>Three!</li>
-	  </ol>
-	</section>
-
-	<section>
-	  <h2>Tabular Tables</h2>
-	  <table>
-	    <thead>
-	      <tr>
-		<th>Item</th>
-		<th>Value</th>
-		<th>Quantity</th>
-	      </tr>
-	    </thead>
-	    <tbody>
-	      <tr>
-		<td>Apples</td>
-		<td>$1</td>
-		<td>7</td>
-	      <tr>
-	      <tr>
-		<td>Lemonade</td>
-		<td>$2</td>
-		<td>18</td>
-	      <tr>
-	      <tr>
-		<td>Bread</td>
-		<td>$3</td>
-		<td>2</td>
-	      <tr>
-	    </tbody>
-	  </table>
-	</section>
-
-	<section>
-	  <h2>Clever Quotes</h2>
-	  <p>
-	    These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-	      &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-	  </p>
-	  <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-	    &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-	    reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-	  </blockquote>
-	</section>
-
-	<section>
-	  <h2>Intergalactic Interconnections</h2>
-	  <p>
-	    You can link between slides internally,
-	    <a href="#/2/3">like this</a>.
-	  </p>
-	</section>
-
-	<section>
-	  <h2>Speaker View</h2>
-	  <p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-	  <p>Press the <em>S</em> key to try it out.</p>
-
+	  <h2>defining EXPLAIN</h2>
 	  <aside class="notes">
-	    Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+	    <ul>
+	      <li>Utility command to describe how Postgres will execute a query</li>
+	      <li>really powerful</li>
+	    </ul>
 	  </aside>
 	</section>
-
 	<section>
-	  <h2>Export to PDF</h2>
-	  <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-	  <iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-	</section>
-
-	<section>
-	  <h2>Global State</h2>
-	  <p>
-	    Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-	    will be added as a class to the document element when the slide is open. This lets you
-	    apply broader style changes, like switching the page background.
+	  <h2>What to EXPLAIN</h2>
+	  <ul>
+	    <li>Expensive Queries</li>
+	    <li><code>pg_stat_statements</code></li>
+	    <li>slow query logs</li>
+	  </ul>
+	  <p class="fragment">
+	    <code>egrep 'duration: [0-9]{6}'</code>
 	  </p>
 	</section>
-
-	<section data-state="customevent">
-	  <h2>State Events</h2>
-	  <p>
-	    Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-	  </p>
-	  <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-	      Reveal.addEventListener( 'customevent', function() {
-	      console.log( '"customevent" has fired' );
-	      } );
+	<section>
+	  <h2>The anatomy of an explanation</h2>
+	  <img src="images/tree.jpg" style="height:500px"/>
+	  <small>https://www.flickr.com/photos/asphericlens/</small>
+	  <aside class="notes">
+	    <ul>
+	      <li>ties into how postgres executes a query plan</li>
+	      <li>tree of plan nodes</li>
+	      <li>pull-based iterator model</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>sample data</h2>
+	  <pre><code data-trim>
+CREATE TABLE foo (c1 integer, c2 text);
+INSERT INTO foo
+  SELECT i, md5(random()::text)
+  FROM generate_series(1, 1000000) AS i;
 	  </code></pre>
 	</section>
-
 	<section>
-	  <h2>Take a Moment</h2>
-	  <p>
-	    Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-	  </p>
+	  <h2>our first explain</h2>
+	  <pre><code data-trim>
+EXPLAIN SELECT * FROM foo;
+	    </code>
+                         QUERY PLAN
+--------------------------------------------------------------
+ Seq Scan on foo  (cost=0.00..18584.82 rows=1025082 width=36)
+	  </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>not real units</li>
+	      <li>sequential scan</li>
+	      <li>startup cost 0.00</li>
+	      <li>total cost 18584.82</li>
+	      <li>rows count estimate 1025082</li>
+	      <li>width 36</li>
+	    </ul>
+	  </aside>
 	</section>
-
 	<section>
-	  <h2>Much more</h2>
+	  <h2>analyze</h2>
+	  <pre><code data-trim>
+ANALYZE foo; EXPLAIN SELECT * FROM foo;
+	    </code>
+ANALYZE
+                          QUERY PLAN                          
+--------------------------------------------------------------
+ Seq Scan on foo  (cost=0.00..18334.00 rows=1000000 width=37)
+(1 row)
+	  </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>analyze gathers system statistics</li>
+	      <li>samples 300 * default_statistics_target rows</li>
+	      <li>tracks most common values</li>
+	      <li>distribution histogram</li>
+	      <li>null fraction</li>
+	      <li>stores them in pg_statistic table</li>
+	      <li>simplified view in pg_stats</li>
+	      <li>used to discriminate between query plans</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>Stats are in the catalog</h2>
+	  <pre><code data-trim>
+SELECT
+  sum(avg_width) AS width, reltuples,
+  relpages * current_setting('seq_page_cost')::float4 +
+    reltuples * current_setting('cpu_tuple_cost')::float4
+    AS total_cost
+FROM
+  pg_class INNER JOIN pg_stats ON tablename = relname
+WHERE
+  relname = 'foo' GROUP BY 2, 3;
+	    </code>
+ width | reltuples | total_cost 
+-------+-----------+------------
+    37 |     1e+06 |      18334
+(1 row)
+	  </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>stats are in the catalog</li>
+	      <li>no magic</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>explain analyze</h2>
+	  <pre><code data-trim>
+EXPLAIN ANALYZE SELECT * FROM foo;
+	    </code>
+                       QUERY PLAN                                                   
+--------------------------------------------------------------------
+ Seq Scan on foo  (cost=0.00..18334.00 rows=1000000 width=37)
+                    (actual time=0.007..66.319 rows=1000000 loops=1)
+ Planning time: 0.026 ms
+ Execution time: 92.861 ms
+(3 rows)
+	  </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>actually runs the query!</li>
+	      <li>real units: milliseconds</li>
+	      <li>expected / actual discrepancies in row counts: analyze</li>
+	      <li>can still run on queries that modify data with rollback</li>
+	      <li>far more useful when diagnosing perf problems</li>
+	      <li>run twice to check caching impact</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>explain options!</h2>
+	  <pre><code data-trim>
+EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM foo;
+	    </code>
+                     QUERY PLAN                                                   
+--------------------------------------------------------------------
+ Seq Scan on foo  (cost=0.00..18334.00 rows=1000000 width=37)
+                    (actual time=0.006..67.787 rows=1000000 loops=1)
+   Buffers: shared hit=8334
+ Planning time: 0.019 ms
+ Execution time: 99.961 ms
+(4 rows)
+	  </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>buffers includes i/o information</li>
+	      <li>"hit": found in postgres buffer pool</li>
+	      <li>"read": read from os page cache or disk</li>
+	      <li>verbose option also exists; not terribly useful</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>caching</h2>
+	  <pre><code data-trim>
+$ sudo service postgresql stop
+$ sync
+$ echo 3 | sudo tee /proc/sys/vm/drop_caches
+$ sudo service postgresql start
+	  </code></pre>
+	  <aside class="notes">
+	    this is how to drop caches on ubuntu
+	  </aside>
+	</section>
+	<section>
+	  <h2>caching</h2>
+	  <pre><code data-trim>
+EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM foo;
+	    </code>
+                        QUERY PLAN
+--------------------------------------------------------------------
+ Seq Scan on foo  (cost=0.00..18334.00 rows=1000000 width=37)
+                   (actual time=0.257..143.518 rows=1000000 loops=1)
+   Buffers: shared read=8334
+ Planning time: 3.267 ms
+ Execution time: 182.555 ms
+(4 rows)
+	  </pre>
+	  <aside class="notes">
+	    buffers hit -> buffers read
+	  </aside>
+	</section>
+	<section>
+	  <h2>caching</h2>
+	  <pre><code data-trim>
+EXPLAIN (ANALYZE, BUFFERS) SELECT * FROM foo;
+	    </code>
+                        QUERY PLAN                                 
+-------------------------------------------------------------------
+ Seq Scan on foo  (cost=0.00..18334.00 rows=1000000 width=37)
+                   (actual time=0.096..80.790 rows=1000000 loops=1)
+   Buffers: shared hit=32 read=8302
+ Planning time: 0.048 ms
+ Execution time: 114.771 ms
+(4 rows)
+	  </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>re-running the query, only 32 buffers hit</li>
+	      <li>because postgres avoids thrashing the cache on seq scans</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>filtering</h2>
+	  <pre><code data-trim>
+EXPLAIN SELECT * FROM foo WHERE c1 > 500;
+	    </code>
+                         QUERY PLAN                          
+-------------------------------------------------------------
+ Seq Scan on foo  (cost=0.00..20834.00 rows=999478 width=37)
+   Filter: (c1 > 500)
+(2 rows)
+	  </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>no indexes, so still has to be seq scan</li>
+	      <li>throws away rows which don't match filter while scanning</li>
+	      <li>higher cost due to having to check filter for each row</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>stats still in catalog</h2>
+	  <pre><code data-trim>
+SELECT
+  relpages * current_setting('seq_page_cost')::float4 +
+    reltuples * current_setting('cpu_tuple_cost')::float4 +
+    reltuples * current_setting('cpu_operator_cost')::float4
+    AS total_cost
+FROM
+  pg_class
+WHERE
+  relname = 'foo';
+	    </code>
+ total_cost 
+------------
+      20834
+(1 row)
+	  </pre>
+	</section>
+	<section>
+	  <h2>would an index help?</h2>
+	  <pre><code data-trim>
+CREATE INDEX ON foo(c1);
+EXPLAIN SELECT * FROM foo WHERE c1 > 500;
+	    </code>
+CREATE INDEX
+                         QUERY PLAN                          
+-------------------------------------------------------------
+ Seq Scan on foo  (cost=0.00..20834.00 rows=999478 width=37)
+   Filter: (c1 > 500)
+(2 rows)
+	  </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>no</li>
+	      <li>1M row table; we're only discarding 500 rows</li>
+	      <li>still need to read most of table</li>
+	      <li>faster if done sequentially</li>
+	      <li>index not helpful for >50%</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>you can't tell me what to do</h2>
+	  <pre><code data-trim>
+SET enable_seqscan TO off;
+EXPLAIN SELECT * FROM foo WHERE c1 > 500;
+SET enable_seqscan TO on;
+	    </code>
+SET
+                  QUERY PLAN                                   
+----------------------------------------------
+ Index Scan using foo_c1_idx on foo
+    (cost=0.42..36800.62 rows=999497 width=37)
+   Index Cond: (c1 > 500)
+(2 rows)
+SET
+	  </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>bad idea</li>
+	      <li>for each index entry, has to read corresponding page</li>
+	      <li>first row, page 1; second row, page 1; third, still page 1</li>
+	      <li>note that there are enable_* parameters for different access methods</li>
+	      <li></li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>using the index</h2>
+	  <pre><code data-trim>
+EXPLAIN SELECT * FROM foo WHERE c1 < 500;
+	    </code>
+              QUERY PLAN                                
+----------------------------------------
+ Index Scan using foo_c1_idx on foo
+    (cost=0.42..25.23 rows=503 width=37)
+   Index Cond: (c1 < 500)
+(2 rows)
+	  </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>works!</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>more complex filter</h2>
+	  <pre><code data-trim>
+EXPLAIN SELECT * FROM foo WHERE c1 < 500 AND c2 LIKE 'abcd%';
+	    </code>
+             QUERY PLAN                               
+--------------------------------------
+ Index Scan using foo_c1_idx on foo
+    (cost=0.42..26.49 rows=1 width=37)
+   Index Cond: (c1 < 500)
+   Filter: (c2 ~~ 'abcd%'::text)
+(3 rows)
+	  </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>index scan and filter</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>filter on just c2</h2>
+	  <pre><code data-trim>
+EXPLAIN ANALYZE SELECT * FROM foo WHERE c2 LIKE 'abcd%';
+	    </code>
+                      QUERY PLAN                                               
+----------------------------------------------------------------
+ Seq Scan on foo  (cost=0.00..20834.00 rows=100 width=37)
+                    (actual time=9.459..101.409 rows=12 loops=1)
+   Filter: (c2 ~~ 'abcd%'::text)
+   Rows Removed by Filter: 999988
+ Planning time: 0.101 ms
+ Execution time: 101.438 ms
+(5 rows)
+	  </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>seq scan and filter</li>
+	      <li>only 12 rows kept--index could help</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>indexing c2</h2>
+	  <pre><code data-trim>
+CREATE INDEX ON foo(c2 text_pattern_ops);
+EXPLAIN ANALYZE SELECT * FROM foo WHERE c2 LIKE 'abcd%';
+	    </code>
+CREATE INDEX
+                         QUERY PLAN                                                      
+--------------------------------------------------------------------
+ Bitmap Heap Scan on foo  (cost=4.60..62.88 rows=100 width=37)
+                          (actual time=0.043..0.102 rows=12 loops=1)
+   Filter: (c2 ~~ 'abcd%'::text)
+   Heap Blocks: exact=12
+   ->  Bitmap Index Scan on foo_c2_idx
+                          (cost=0.00..4.58 rows=15 width=0)
+                          (actual time=0.023..0.023 rows=12 loops=1)
+         Index Cond: ((c2 ~>=~ 'abcd'::text)
+                       AND (c2 ~<~ 'abce'::text))
+ Planning time: 0.244 ms
+ Execution time: 0.117 ms
+(7 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>text_pattern ops: for substring comparisons</li>
+	      <li>bitmap index scan: bit for each page</li>
+	      <li>get pages which match these criteria; filter</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>covering index</h2>
+	  <pre><code data-trim>
+EXPLAIN ANALYZE SELECT c1 FROM foo WHERE c1 < 500;
+	    </code>
+                   QUERY PLAN                                                        
+-------------------------------------------------
+ Index Only Scan using foo_c1_idx on foo
+    (cost=0.42..25.23 rows=503 width=4)
+      (actual time=0.036..0.257 rows=499 loops=1)
+   Index Cond: (c1 < 500)
+   Heap Fetches: 499
+ Planning time: 0.089 ms
+ Execution time: 0.305 ms
+(5 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>index only scan!</li>
+	      <li>no need to go to heap at all</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>major scan nodes</h2>
 	  <ul>
-	    <li>Right-to-left support</li>
-	    <li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-	    <li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-	    <li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-	    <li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+	    <li>sequential scan</li>
+	    <li>index scan</li>
+	    <li>bitmap index scan</li>
+	    <li>index only scan</li>
 	  </ul>
 	</section>
-
-	<section style="text-align: left;">
-	  <h1>THE END</h1>
-	  <p>
-	    - <a href="http://slides.com">Try the online editor</a> <br>
-	    - <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-	  </p>
+	<section>
+	  <h2>order by</h2>
+	  <pre><code data-trim>
+DROP INDEX foo_c1_idx;
+EXPLAIN ANALYZE SELECT * FROM foo ORDER BY c1;
+	    </code>
+DROP INDEX
+                       QUERY PLAN                                                      
+------------------------------------------------------------------
+ Sort  (cost=145337.34..147837.34 rows=1000000 width=37)
+         (actual time=507.949..611.465 rows=1000000 loops=1)
+   Sort Key: c1
+   Sort Method: external merge  Disk: 45944kB
+   ->  Seq Scan on foo  (cost=0.00..18334.00 rows=1000000 width=37)
+             (actual time=0.006..77.289 rows=1000000 loops=1)
+ Planning time: 0.082 ms
+ Execution time: 643.839 ms
+(6 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>external (disk) sort</li>
+	      <li>not enough room to run it in memory</li>
+	      <li>really expensive</li>
+	    </ul>
+	  </aside>
 	</section>
-
+	<section>
+	  <h2>order by</h2>
+	  <pre><code data-trim>
+SET work_mem = '128MB';
+EXPLAIN ANALYZE SELECT * FROM foo ORDER BY c1;
+	    </code>
+SET
+                        QUERY PLAN                                                      
+------------------------------------------------------------
+ Sort  (cost=117991.84..120491.84 rows=1000000 width=37)
+         (actual time=234.874..268.844 rows=1000000 loops=1)
+   Sort Key: c1
+   Sort Method: quicksort  Memory: 102702kB
+   ->  Seq Scan on foo  (cost=0.00..18334.00 rows=1000000 width=37)
+             (actual time=0.014..74.361 rows=1000000 loops=1)
+ Planning time: 0.078 ms
+ Execution time: 296.311 ms
+(6 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>in-memory sort</li>
+	      <li>needs more memory than the on-disk sort</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>order by</h2>
+	  <pre><code data-trim>
+CREATE INDEX ON foo(c1);
+EXPLAIN ANALYZE SELECT * FROM foo ORDER BY c1;
+	    </code>
+CREATE INDEX
+                   QUERY PLAN                                                             
+-----------------------------------------------------
+ Index Scan using foo_c1_idx on foo
+    (cost=0.42..34317.43 rows=1000000 width=37)
+    (actual time=0.029..157.633 rows=1000000 loops=1)
+ Planning time: 0.117 ms
+ Execution time: 183.110 ms
+(3 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>just follows the index</li>
+	      <li>more expensive than a seq scan, but no need to sort</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>back to c2</h2>
+	  <pre><code data-trim>
+DROP INDEX foo_c2_idx;
+EXPLAIN ANALYZE SELECT * FROM foo WHERE c2 LIKE 'ab%';
+	    </code>
+DROP INDEX
+                     QUERY PLAN                                                 
+------------------------------------------------------------------
+ Seq Scan on foo  (cost=0.00..20834.00 rows=10101 width=37)
+                    (actual time=0.033..117.064 rows=3935 loops=1)
+   Filter: (c2 ~~ 'ab%'::text)
+   Rows Removed by Filter: 996065
+ Planning time: 0.086 ms
+ Execution time: 117.215 ms
+(5 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>back to seq scan and filter</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>limits</h2>
+	  <pre><code data-trim>
+EXPLAIN ANALYZE SELECT * FROM foo WHERE c2 LIKE 'ab%' LIMIT 10;
+	    </code>
+                        QUERY PLAN                                                  
+-----------------------------------------------------------------
+ Limit  (cost=0.00..20.63 rows=10 width=37)
+          (actual time=0.024..0.211 rows=10 loops=1)
+   ->  Seq Scan on foo  (cost=0.00..20834.00 rows=10101 width=37)
+             (actual time=0.022..0.208 rows=10 loops=1)
+         Filter: (c2 ~~ 'ab%'::text)
+         Rows Removed by Filter: 1806
+ Planning time: 0.043 ms
+ Execution time: 0.221 ms
+(6 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>still seq scan and filter</li>
+	      <li>but only has to process ~1800 rows</li>
+	      <li>before finding the 10 ~~ 'ab%'</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>joins</h2>
+	  <pre><code data-trim>
+CREATE TABLE bar(c1 integer, c2 boolean);
+INSERT INTO bar
+  SELECT i, i % 2 = 1
+  FROM generate_series(1, 500000) AS i;
+ANALYZE bar;
+	    </code>
+CREATE TABLE
+INSERT 0 500000
+ANALYZE
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>let's create another table</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>joins</h2>
+	  <pre><code data-trim>
+EXPLAIN ANALYZE SELECT * FROM foo INNER JOIN bar USING(c1);
+	    </code>
+                      QUERY PLAN                                                       
+--------------------------------------------------------------------
+ Hash Join  (cost=13463.00..49297.00 rows=500000 width=38)
+              (actual time=175.712..891.262 rows=500000 loops=1)
+   Hash Cond: (foo.c1 = bar.c1)
+   ->  Seq Scan on foo  (cost=0.00..18334.00 rows=1000000 width=37)
+                   (actual time=0.006..65.207 rows=1000000 loops=1)
+   ->  Hash  (cost=7213.00..7213.00 rows=500000 width=5)
+                (actual time=119.472..119.472 rows=500000 loops=1)
+         Buckets: 65536  Batches: 1  Memory Usage: 19532kB
+         ->  Seq Scan on bar
+                 (cost=0.00..7213.00 rows=500000 width=5)
+                   (actual time=0.007..52.843 rows=500000 loops=1)
+ Planning time: 0.231 ms
+ Execution time: 904.222 ms
+(8 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>hash join</li>
+	      <li>hash all of left; hash right see what matches</li>
+	      <li>only works for equality as join condition</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>joins</h2>
+	  <pre><code data-trim>
+CREATE INDEX ON bar(c1);
+EXPLAIN ANALYZE SELECT * FROM foo INNER JOIN bar USING(c1);
+	    </code>
+CREATE INDEX
+                       QUERY PLAN                                                               
+----------------------------------------------------------
+ Merge Join  (cost=1.77..39862.33 rows=500000 width=38)
+    (actual time=0.021..273.464 rows=500000 loops=1)
+   Merge Cond: (foo.c1 = bar.c1)
+   ->  Index Scan using foo_c1_idx on foo
+           (cost=0.42..34317.43 rows=1000000 width=37)
+           (actual time=0.010..67.641 rows=500001 loops=1)
+   ->  Index Scan using bar_c1_idx on bar
+           (cost=0.42..15212.42 rows=500000 width=5)
+           (actual time=0.008..71.350 rows=500000 loops=1)
+ Planning time: 0.366 ms
+ Execution time: 286.706 ms
+(6 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>merge join</li>
+	      <li>traverse two sorted sets in tandem</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>joins</h2>
+	  <pre><code data-trim>
+DELETE FROM bar WHERE c1 > 500; DROP INDEX bar_c1_idx; ANALYZE bar;
+EXPLAIN ANALYZE SELECT * FROM foo INNER JOIN bar USING(c1);
+	    </code>
+DELETE 499500
+DROP INDEX
+ANALYZE
+                        QUERY PLAN                                                             
+------------------------------------------------------------------
+ Merge Join  (cost=2240.97..2266.86 rows=500 width=38)
+               (actual time=22.097..22.310 rows=500 loops=1)
+   Merge Cond: (foo.c1 = bar.c1)
+   ->  Index Scan using foo_c1_idx on foo
+          (cost=0.42..34317.43 rows=1000000 width=37)
+          (actual time=0.005..0.072 rows=501 loops=1)
+   ->  Sort  (cost=2240.41..2241.66 rows=500 width=5)
+             (actual time=22.089..22.109 rows=500 loops=1)
+         Sort Key: bar.c1
+         Sort Method: quicksort  Memory: 48kB
+         ->  Seq Scan on bar (cost=0.00..2218.00 rows=500 width=5)
+                (actual time=0.004..22.042 rows=500 loops=1)
+ Planning time: 0.123 ms
+ Execution time: 22.336 ms
+(9 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>merge join</li>
+	      <li>sometimes worth sorting the input</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>joins</h2>
+	  <pre><code data-trim>
+DELETE FROM foo WHERE c1 > 1000; ANALYZE foo;
+EXPLAIN ANALYZE SELECT * FROM foo INNER JOIN bar USING(c1);
+	    </code>
+DELETE 999000
+ANALYZE
+                         QUERY PLAN                                                         
+------------------------------------------------------------------
+ Nested Loop  (cost=9.84..6939.13 rows=500 width=38)
+                (actual time=0.015..1.871 rows=500 loops=1)
+   ->  Seq Scan on bar  (cost=0.00..8.00 rows=500 width=5)
+               (actual time=0.004..0.058 rows=500 loops=1)
+   ->  Bitmap Heap Scan on foo  (cost=9.84..13.85 rows=1 width=37)
+                       (actual time=0.003..0.003 rows=1 loops=500)
+         Recheck Cond: (c1 = bar.c1)
+         Heap Blocks: exact=500
+         ->  Bitmap Index Scan on foo_c1_idx
+               (cost=0.00..9.84 rows=1 width=0)
+                 (actual time=0.002..0.002 rows=1 loops=500)
+               Index Cond: (c1 = bar.c1)
+ Planning time: 0.228 ms
+ Execution time: 1.917 ms
+(9 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>nested loop join</li>
+	      <li>first row from left, each row from right</li>
+	      <li>good for tiny amounts of data</li>
+	      <li>sometimes picked by postgres when it has bad stats</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>joins</h2>
+	  <pre><code data-trim>
+EXPLAIN ANALYZE SELECT * FROM foo CROSS JOIN bar;
+	    </code>
+                          QUERY PLAN                                               
+--------------------------------------------------------------------
+ Nested Loop  (cost=0.00..29179.80 rows=2330000 width=42)
+                (actual time=0.001..0.001 rows=0 loops=1)
+   ->  Seq Scan on bar  (cost=0.00..33.30 rows=2330 width=5)
+                   (actual time=0.001..0.001 rows=0 loops=1)
+   ->  Materialize  (cost=0.00..24.00 rows=1000 width=37)
+                      (never executed)
+         ->  Seq Scan on foo  (cost=0.00..19.00 rows=1000 width=37)
+                                  (never executed)
+ Planning time: 0.041 ms
+ Execution time: 0.018 ms
+(6 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>nested loop join</li>
+	      <li>only join type for cross join</li>
+	      <li>materialize node!</li>
+	      <li>often used for sorts</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>major join nodes</h2>
+	  <ul>
+	    <li>nested loop join</li>
+	    <li>merge join</li>
+	    <li>hash join</li>
+	  </ul>
+	  <aside class="notes">
+	    <ul>
+	      <li>nlj: small data, cross joins, bad stats</li>
+	      <li>merge join: sorted input, nice for big datasets</li>
+	      <li>hash join: only equality joins, but quick</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>inheritance</h2>
+	  <pre><code data-trim>
+CREATE TABLE baz(c1 timestamptz, c2 text);
+CREATE TABLE baz_2015(CHECK(c1 BETWEEN '2015-01-01' AND '2015-12-31')) INHERITS (baz);
+CREATE TABLE baz_2014(CHECK(c1 BETWEEN '2014-01-01' AND '2014-12-31')) INHERITS (baz);
+CREATE TABLE baz_2013(CHECK(c1 BETWEEN '2013-01-01' AND '2013-12-31')) INHERITS (baz);
+INSERT INTO baz_2015 SELECT now() - i * interval '1 day', 'line '||i
+  FROM generate_series(1, 100) AS i;
+INSERT INTO baz_2014 SELECT now() - interval '1 year' - i * interval '1 day', 'line '||i
+  FROM generate_series(1, 100) AS i;
+ INSERT INTO baz_2013 SELECT now() - interval '2 years' - i * interval '1 day', 'line '||i
+  FROM generate_series(1, 100) AS i;
+	    </code>
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 100
+INSERT 0 100
+INSERT 0 100
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>useful for partitioning</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>inheritance</h2>
+	  <pre><code data-trim>
+EXPLAIN ANALYZE SELECT * FROM baz
+  WHERE c1 BETWEEN '2015-03-29' AND '2015-04-02';
+	    </code>
+                    QUERY PLAN                                                                  
+--------------------------------------------------------------
+ Append  (cost=0.00..2.50 rows=5 width=20)
+           (actual time=0.008..0.013 rows=4 loops=1)
+   ->  Seq Scan on baz  (cost=0.00..0.00 rows=1 width=40)
+                  (actual time=0.000..0.000 rows=0 loops=1)
+         Filter: ((c1 >= '2015-03-29 00:00:00'::timestamptz)
+              AND (c1 <= '2015-04-02 00:00:00'::timestamptz))
+   ->  Seq Scan on baz_2015  (cost=0.00..2.50 rows=4 width=15)
+                     (actual time=0.008..0.012 rows=4 loops=1)
+         Filter: ((c1 >= '2015-03-29 00:00:00'::timestamptz)
+              AND (c1 <= '2015-04-02 00:00:00'::timestamptz))
+         Rows Removed by Filter: 96
+ Planning time: 0.237 ms
+ Execution time: 0.026 ms
+(8 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>append node</li>
+	      <li>seq scan on parent</li>
+	      <li>and only the child matching constraints</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>inheritance</h2>
+	  <pre><code data-trim>
+CREATE INDEX ON baz_2015(c1);
+EXPLAIN ANALYZE SELECT * FROM baz WHERE c1 = '2015-04-01';
+	    </code>
+CREATE INDEX
+                     QUERY PLAN                                                            
+---------------------------------------------------------------
+ Append  (cost=0.00..118.55 rows=27 width=39)
+       (actual time=1.947..1.947 rows=0 loops=1)
+   ->  Seq Scan on baz  (cost=0.00..110.25 rows=26 width=40)
+                   (actual time=1.937..1.937 rows=0 loops=1)
+         Filter: (c1 = '2015-04-01 00:00:00'::timestamptz)
+   ->  Index Scan using baz_2015_c1_idx on baz_2015
+          (cost=0.28..8.30 rows=1 width=15)
+            (actual time=0.010..0.010 rows=0 loops=1)
+         Index Cond: (c1 = '2015-04-01 00:00:00'::timestamptz)
+ Planning time: 0.226 ms
+ Execution time: 1.978 ms
+(7 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>planner will pick the right indexes for child tables</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>aggregates</h2>
+	  <pre><code data-trim>
+EXPLAIN SELECT COUNT(*) FROM foo;
+	    </code>
+                         QUERY PLAN                          
+-------------------------------------------------------------
+ Aggregate  (cost=21.50..21.51 rows=1 width=0)
+   ->  Seq Scan on foo  (cost=0.00..19.00 rows=1000 width=0)
+(2 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>simplest aggregate node</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>aggregates</h2>
+	  <pre><code data-trim>
+EXPLAIN SELECT max(c2) FROM foo;
+	    </code>
+                         QUERY PLAN                          
+-------------------------------------------------------------
+ Aggregate  (cost=21.50..21.51 rows=1 width=0)
+   ->  Seq Scan on foo  (cost=0.00..19.00 rows=1000 width=0)
+(2 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>other aggregates can use the agg node as well</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>aggregates</h2>
+	  <pre><code data-trim>
+CREATE INDEX ON foo(c2);
+EXPLAIN ANALYZE SELECT max(c2) FROM foo;
+	    </code>
+CREATE INDEX
+                      QUERY PLAN                                                                       
+----------------------------------------------------------------
+ Result  (cost=0.50..0.51 rows=1 width=0)
+         (actual time=0.028..0.028 rows=1 loops=1)
+   InitPlan 1 (returns $0)
+     ->  Limit  (cost=0.42..0.50 rows=1 width=33)
+                (actual time=0.027..0.027 rows=1 loops=1)
+           ->  Index Only Scan Backward using foo_c2_idx on foo
+                  (cost=0.42..79676.41 rows=1000000 width=33)
+                  (actual time=0.025..0.025 rows=1 loops=1)
+                 Index Cond: (c2 IS NOT NULL)
+                 Heap Fetches: 1
+ Planning time: 0.160 ms
+ Execution time: 0.047 ms
+(8 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>but they can be smarter</li>
+	      <li>go to the end of the index, go backward, take first result</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>aggregates</h2>
+	  <pre><code data-trim>
+DROP INDEX foo_c2_idx;
+EXPLAIN ANALYZE SELECT c2, count(*) FROM foo GROUP BY c2;
+	    </code>
+DROP INDEX
+                              QUERY PLAN                                                         
+-------------------------------------------------------------------
+ GroupAggregate  (cost=145337.34..162815.50 rows=997816 width=33)
+             (actual time=3609.391..5459.632 rows=999782 loops=1)
+   Group Key: c2
+   ->  Sort  (cost=145337.34..147837.34 rows=1000000 width=33)
+           (actual time=3609.382..5236.497 rows=1000000 loops=1)
+         Sort Key: c2
+         Sort Method: external merge  Disk: 41960kB
+         ->  Seq Scan on foo
+                 (cost=0.00..18334.00 rows=1000000 width=33)
+                 (actual time=0.012..106.451 rows=1000000 loops=1)
+ Planning time: 0.164 ms
+ Execution time: 5492.032 ms
+(8 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>group agg requires sorted input</li>
+	      <li>external sort here; expensive</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>aggregates</h2>
+	  <pre><code data-trim>
+SET work_mem = '128MB';
+EXPLAIN ANALYZE SELECT c2, count(*) FROM foo GROUP BY c2;
+	    </code>
+SET
+                         QUERY PLAN                                                      
+-------------------------------------------------------------------
+ HashAggregate  (cost=23334.00..33312.16 rows=997816 width=33)
+            (actual time=598.006..913.493 rows=999782 loops=1)
+   Group Key: c2
+   ->  Seq Scan on foo  (cost=0.00..18334.00 rows=1000000 width=33)
+                  (actual time=0.011..109.682 rows=1000000 loops=1)
+ Planning time: 0.044 ms
+ Execution time: 963.061 ms
+(5 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>hash agg</li>
+	      <li>needs more work mem</li>
+	      <li>like hash joinm but for aggregation</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>aggregates</h2>
+	  <pre><code data-trim>
+RESET work_mem;
+CREATE INDEX ON foo(c2);
+EXPLAIN ANALYZE SELECT c2, count(*) FROM foo GROUP BY c2;
+	    </code>
+RESET
+CREATE INDEX
+                         QUERY PLAN                                                                  
+-------------------------------------------------------------
+ GroupAggregate  (cost=0.42..92152.49 rows=997816 width=33)
+             (actual time=0.024..781.881 rows=999782 loops=1)
+   Group Key: c2
+   ->  Index Only Scan using foo_c2_idx on foo
+                (cost=0.42..77174.33 rows=1000000 width=33)
+            (actual time=0.019..508.656 rows=1000000 loops=1)
+         Heap Fetches: 1000000
+ Planning time: 0.115 ms
+ Execution time: 808.639 ms
+(6 rows)
+          </pre>
+	  <aside class="notes">
+	    <ul>
+	      <li>merge join</li>
+	      <li>traverse two sorted sets in tandem</li>
+	    </ul>
+	  </aside>
+	</section>
+	<section>
+	  <h2>major aggregate nodes</h2>
+	  <ul>
+	    <li>aggregate</li>
+	    <li>group aggregate</li>
+	    <li>hash aggregate</li>
+	  </ul>
+	</section>
+	<section>
+	  <h2>conclusion</h2>
+	  <ul>
+	    <li>Postgres planner is pretty sweet</li>
+	    <li>EXPLAIN gives insight into what planner is doing</li>
+	    <li>work_mem changes and indexes can give you better plans</li>
+	  </ul>
+	</section>
+	<section>
+	  <h2>questions</h2>
+	</section>
       </div>
 
     </div>
